@@ -1,0 +1,43 @@
+[[source]]
+url = 'https://pypi.python.org/simple'
+verify_ssl = true
+name = 'pypi'
+
+[requires]
+python_version = '3.7'
+# TODO: Make package requirements dependent on project?
+
+[packages]
+pandas = '*'
+psycopg2 = '*'
+shap = '*'
+scikit-learn = '*'
+scikit-optimize = '*'
+pyarrow = '*'
+pandera = '*'
+requests = '*'
+flask = '*' # for flask api
+fastapi = '*' # for fastapi
+gunicorn = '*' # webserver for heroku
+uvicorn = {extras = ["standard"], version = '*'} # webserer for fastapi
+boto3 = '*'
+sagemaker = '*'
+sagemaker-inference = '*'
+mlflow = '*'
+evidently = '*'
+pyyaml = '*'
+tensorflow = '*'
+pydot = '*'
+graphviz = '*'
+
+[dev-packages]
+mypy = '*'
+#black = '*'
+pytest = '*'
+isort = '*'
+coverage = {version = '*', extras = ["toml"]}
+types-requests = '*'
+types-PyYAML = '*'
+
+[pipenv]
+allow_prereleases = true # or run pipenv install --pre
